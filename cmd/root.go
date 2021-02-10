@@ -13,7 +13,7 @@ var rootCmd = &cobra.Command{
 	Long:  "This is the main command, rest of them are child of it, basically the binary file name (tubectl) represents this, don't need to put <oka> command",
 
 	Run: func(cmd *cobra.Command, args []string) {
-		fmt.Println("Hello From CLI")
+		fmt.Println("Hello From tubectl")
 	},
 }
 

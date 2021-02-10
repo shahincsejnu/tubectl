@@ -28,7 +28,9 @@ func CreateClient() kubernetes.Interface {
 	if err != nil {
 		panic(err)
 	}
-	clientset, err := kubernetes.NewForConfig(config)
+
+	var clientset kubernetes.Interface
+	clientset, err = kubernetes.NewForConfig(config)
 	if err != nil {
 		panic(err)
 	}
