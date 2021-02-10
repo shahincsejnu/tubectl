@@ -15,7 +15,7 @@ import (
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 )
 
-// for creating the deployment
+// CreateDeployment creates a deployment
 func CreateDeployment() {
 	var clientset kubernetes.Interface
 	clientset = CreateClient()
@@ -68,7 +68,7 @@ func CreateDeployment() {
 	fmt.Printf("Created deployment %q.\n", result.GetObjectMeta().GetName())
 }
 
-// for getting all the deployments in default namespace
+// GetDeployment for getting all the deployments in default namespace
 func GetDeployment() {
 	var clientset kubernetes.Interface
 	clientset = CreateClient()
@@ -102,7 +102,7 @@ func GetDeployment() {
 	}
 }
 
-// for deleteing a deployment
+//DeleteDeployment for deleteing a deployment
 func DeleteDeployment(args []string) {
 	var clientset kubernetes.Interface
 	clientset = CreateClient()
@@ -121,7 +121,7 @@ func DeleteDeployment(args []string) {
 	}
 }
 
-// for updating a deployment
+//UpdateDeployment for updating a deployment
 func UpdateDeployment(deployName string, replica int32, image string) {
 	var clientset kubernetes.Interface
 	clientset = CreateClient()

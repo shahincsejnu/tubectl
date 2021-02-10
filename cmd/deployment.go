@@ -22,7 +22,7 @@ func init() {
 	updateCmd.PersistentFlags().Int32VarP(&replica, "replica", "r", 2, "This flag is to give the replica number for updating the replica count of the deployment")
 }
 
-// This variable represents CreateDeploymentCmd
+//CreateDeploymentCmd
 var CreateDeploymentCmd = &cobra.Command{
 	Use:   "deployment",
 	Short: "deployment is a sub-command of create command, it is used to ",
@@ -33,7 +33,7 @@ var CreateDeploymentCmd = &cobra.Command{
 	},
 }
 
-// This variable represents DeleteDeploymentCmd
+//DeleteDeploymentCmd
 var DeleteDeploymentCmd = &cobra.Command{
 	Use:   "deployment",
 	Short: "deployment is a sub-command of delete command, it is used to ",
@@ -44,7 +44,7 @@ var DeleteDeploymentCmd = &cobra.Command{
 	},
 }
 
-// This variable represents GetDeploymentCmd
+//GetDeploymentCmd
 var GetDeploymentCmd = &cobra.Command{
 	Use:   "deployments",
 	Short: "deployment is a sub-command of get command, it is used to get all the deployment in default namespace",
@@ -55,7 +55,7 @@ var GetDeploymentCmd = &cobra.Command{
 	},
 }
 
-// This variable represents UpdateDeploymentCmd
+//UpdateDeploymentCmd
 var UpdateDeploymentCmd = &cobra.Command{
 	Use:   "deployment",
 	Short: "deployment is a sub-command of create command, it is used to ",
