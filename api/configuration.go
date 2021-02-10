@@ -13,7 +13,7 @@ func int32Ptr(i int32) *int32 {
 	return &i
 }
 
-// this will create the clientset and return it
+// CreateClient create the clientset
 func CreateClient() kubernetes.Interface {
 	var kubeconfig *string
 	if home := homedir.HomeDir(); home != "" {
