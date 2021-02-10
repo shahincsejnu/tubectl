@@ -4,8 +4,8 @@ This repository introduced `tubectl` which is basically similar like `kubectl`, 
 
 ## Environment
 
-* Kind version: 
-* Kubernetes Server Version: 
+* Kind version: kind v0.9.0 go1.15.2 linux/amd64
+* Kubernetes Server Version: v1.19.1
 
 ## How to use `tubectl`
 
