@@ -17,6 +17,7 @@ var rootCmd = &cobra.Command{
 	},
 }
 
+// It will call from the main.go
 func Execute() {
 	//fmt.Println("in root execute")
 	if err := rootCmd.Execute(); err != nil {
