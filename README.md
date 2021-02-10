@@ -9,10 +9,10 @@ This repository introduced `tubectl` which is basically similar like `kubectl`, 
 
 ## How to use `tubectl`
 
-* git clone    // clone this repo in your local machine
-* cd client-go  // go to the project client-go folder
-* go install  // create the binary of this project in your machine, which is named `tubectl`
-* `tubectl`  // It will print "Hello From tubectl", this is basically for confirming successful setup
+* `git clone https://github.com/shahincsejnu/client-go.git`: clone this repo in your local machine
+* `cd client-go`: go to the project client-go folder
+* `go install`: create the binary of this project in your machine, which is named `tubectl`
+* `tubectl`: It will print "Hello From tubectl", this is basically for confirming successful setup
 
 ## Deployment Commands
 
