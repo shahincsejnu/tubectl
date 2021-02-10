@@ -2,6 +2,8 @@
 
 This repository introduced `tubectl` which is basically similar like `kubectl`, `tubectl` offers several commands and features like `kubectl`. Currently supported commands of `tubectl` is given below.
 
+[![Go Report Card](https://goreportcard.com/badge/github.com/shahincsejnu/client-go)](https://goreportcard.com/report/github.com/shahincsejnu/client-go)
+
 ## Environment
 
 * Kind version: kind v0.9.0 go1.15.2 linux/amd64
