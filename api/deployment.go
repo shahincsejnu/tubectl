@@ -68,8 +68,8 @@ func CreateDeployment() {
 	fmt.Printf("Created deployment %q.\n", result.GetObjectMeta().GetName())
 }
 
-// GetDeployment for getting all the deployments in default namespace
-func GetDeployment() {
+// GetDeployments for getting all the deployments in default namespace
+func GetDeployments() {
 	var clientset kubernetes.Interface
 	clientset = CreateClient()
 

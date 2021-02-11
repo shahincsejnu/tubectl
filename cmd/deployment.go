@@ -12,18 +12,18 @@ var deployName string
 
 func init() {
 	//fmt.Println("in deployment")
-	createCmd.AddCommand(CreateDeploymentCmd)
-	deleteCmd.AddCommand(DeleteDeploymentCmd)
-	getCmd.AddCommand(GetDeploymentCmd)
-	updateCmd.AddCommand(UpdateDeploymentCmd)
+	createCmd.AddCommand(createDeploymentCmd)
+	deleteCmd.AddCommand(deleteDeploymentCmd)
+	getCmd.AddCommand(getDeploymentCmd)
+	updateCmd.AddCommand(updateDeploymentCmd)
 
 	updateCmd.PersistentFlags().StringVarP(&deployName, "deploy", "d", "demo-deployment", "This flag is to give the deployment name which need to be updated")
 	updateCmd.PersistentFlags().StringVarP(&image, "image", "i", "nginx:1.12", "This flag is to give the image name for updateing the deployment image")
 	updateCmd.PersistentFlags().Int32VarP(&replica, "replica", "r", 2, "This flag is to give the replica number for updating the replica count of the deployment")
 }
 
-//CreateDeploymentCmd is a variable
-var CreateDeploymentCmd = &cobra.Command{
+//createDeploymentCmd is a variable
+var createDeploymentCmd = &cobra.Command{
 	Use:   "deployment",
 	Short: "deployment is a sub-command of create command, it is used to ",
 	Long:  "This command is for creating a deployment object using k8s API",
@@ -33,8 +33,8 @@ var CreateDeploymentCmd = &cobra.Command{
 	},
 }
 
-//DeleteDeploymentCmd is a variable
-var DeleteDeploymentCmd = &cobra.Command{
+//deleteDeploymentCmd is a variable
+var deleteDeploymentCmd = &cobra.Command{
 	Use:   "deployment",
 	Short: "deployment is a sub-command of delete command, it is used to ",
 	Long:  "This command is for deleting a deployment object using k8s API",
@@ -44,19 +44,19 @@ var DeleteDeploymentCmd = &cobra.Command{
 	},
 }
 
-//GetDeploymentCmd is a variable
-var GetDeploymentCmd = &cobra.Command{
+//getDeploymentCmd is a variable
+var getDeploymentCmd = &cobra.Command{
 	Use:   "deployments",
 	Short: "deployment is a sub-command of get command, it is used to get all the deployment in default namespace",
 	Long:  "This command is for getting all the deployment object in default namespace using k8s API",
 	Run: func(cmd *cobra.Command, args []string) {
 		//fmt.Println("deployment called")
-		api.GetDeployment()
+		api.GetDeployments()
 	},
 }
 
-//UpdateDeploymentCmd is a variable
-var UpdateDeploymentCmd = &cobra.Command{
+//updateDeploymentCmd is a variable
+var updateDeploymentCmd = &cobra.Command{
 	Use:   "deployment",
 	Short: "deployment is a sub-command of create command, it is used to ",
 	Long:  "This command is for creating a deployment object using k8s API",
